@@ -1,0 +1,82 @@
+[
+  {
+    "model": "client.client",
+    "pk": 4,
+    "fields": {
+      "name": "Васякин Василий Васильевич",
+      "email": "123@yandex.ru",
+      "message": "рассылка про телеграмм-боты",
+      "owner": null
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 5,
+    "fields": {
+      "name": "Николаев Николай Николаевич",
+      "email": "yhskk@yandex.ru",
+      "message": "рассылки раз в месяц",
+      "owner": null
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 6,
+    "fields": {
+      "name": "Николаев Николай Николаевич",
+      "email": "nkjnkuh@mail.com",
+      "message": "huhuhn",
+      "owner": 7
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 9,
+    "fields": {
+      "name": "Петров Петр Петрович",
+      "email": "zhdavydova@mail.ru",
+      "message": "Нужны рассылки раз в месяц",
+      "owner": 6
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 10,
+    "fields": {
+      "name": "Куригин Степан Егорович",
+      "email": "1234565@google.com",
+      "message": "Новый  клиент",
+      "owner": 6
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 11,
+    "fields": {
+      "name": "кто-то",
+      "email": "smeshalik@mail.ru",
+      "message": "jjj",
+      "owner": 5
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 12,
+    "fields": {
+      "name": "Курочкин Федор Михайлович",
+      "email": "natai-70@mail.ru",
+      "message": "рассылка раз в месяц",
+      "owner": 8
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 13,
+    "fields": {
+      "name": "Мишкина Наталья Геннадьевна",
+      "email": "124ygg@gmail.com",
+      "message": "jhhh",
+      "owner": 8
+    }
+  }
+]

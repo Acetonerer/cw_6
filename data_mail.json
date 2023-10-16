@@ -1,0 +1,169 @@
+[
+  {
+    "model": "mailling.message",
+    "pk": 9,
+    "fields": {
+      "subject_letter": "Утренняя планерка",
+      "body_letter": "Всем быть обязательно!!!",
+      "owner": 6
+    }
+  },
+  {
+    "model": "mailling.message",
+    "pk": 10,
+    "fields": {
+      "subject_letter": "Дайджест новостей",
+      "body_letter": "Все новое и актуальное за прошедшую неделю",
+      "owner": 7
+    }
+  },
+  {
+    "model": "mailling.message",
+    "pk": 11,
+    "fields": {
+      "subject_letter": "Опрос",
+      "body_letter": "Оцените качество нашего обслуживания",
+      "owner": 8
+    }
+  },
+  {
+    "model": "mailling.message",
+    "pk": 12,
+    "fields": {
+      "subject_letter": "Новое поступление",
+      "body_letter": "что-то необычное",
+      "owner": 8
+    }
+  },
+  {
+    "model": "mailling.message",
+    "pk": 13,
+    "fields": {
+      "subject_letter": "njnj",
+      "body_letter": "cftft",
+      "owner": 8
+    }
+  },
+  {
+    "model": "mailling.mailling",
+    "pk": 23,
+    "fields": {
+      "date_start": "2023-10-09T15:00:00Z",
+      "date_end": "2023-10-09T16:00:00Z",
+      "periodicity": "DAILY",
+      "status": "created",
+      "message": 9,
+      "owner": 6,
+      "client": [
+        9,
+        10
+      ]
+    }
+  },
+  {
+    "model": "mailling.mailling",
+    "pk": 24,
+    "fields": {
+      "date_start": "2023-10-10T13:15:00Z",
+      "date_end": "2023-10-10T14:15:00Z",
+      "periodicity": "MONTHLY",
+      "status": "created",
+      "message": 11,
+      "owner": 8,
+      "client": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "mailling.mailling",
+    "pk": 25,
+    "fields": {
+      "date_start": "2023-10-10T13:30:00Z",
+      "date_end": "2023-10-10T14:30:00Z",
+      "periodicity": "DAILY",
+      "status": "started",
+      "message": 12,
+      "owner": 8,
+      "client": [
+        12,
+        13
+      ]
+    }
+  },
+  {
+    "model": "mailling.mailling",
+    "pk": 26,
+    "fields": {
+      "date_start": "2023-10-14T11:00:00Z",
+      "date_end": "2023-10-14T12:00:00Z",
+      "periodicity": "WEEKLY",
+      "status": "created",
+      "message": 13,
+      "owner": 8,
+      "client": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "mailling.logs",
+    "pk": 55,
+    "fields": {
+      "last_try": "2023-10-10T13:13:00.035Z",
+      "status_try": "Success",
+      "answer": null,
+      "mailling_id": 25
+    }
+  },
+  {
+    "model": "mailling.logs",
+    "pk": 56,
+    "fields": {
+      "last_try": "2023-10-10T13:15:00.068Z",
+      "status_try": "Success",
+      "answer": null,
+      "mailling_id": 25
+    }
+  },
+  {
+    "model": "mailling.logs",
+    "pk": 57,
+    "fields": {
+      "last_try": "2023-10-10T13:20:00.010Z",
+      "status_try": "Success",
+      "answer": null,
+      "mailling_id": 25
+    }
+  },
+  {
+    "model": "mailling.logs",
+    "pk": 58,
+    "fields": {
+      "last_try": "2023-10-10T13:25:00.001Z",
+      "status_try": "Success",
+      "answer": null,
+      "mailling_id": 25
+    }
+  },
+  {
+    "model": "mailling.logs",
+    "pk": 59,
+    "fields": {
+      "last_try": "2023-10-10T13:27:55.533Z",
+      "status_try": "Success",
+      "answer": null,
+      "mailling_id": 25
+    }
+  },
+  {
+    "model": "mailling.logs",
+    "pk": 60,
+    "fields": {
+      "last_try": "2023-10-10T13:30:02.343Z",
+      "status_try": "Success",
+      "answer": null,
+      "mailling_id": 25
+    }
+  }
+]

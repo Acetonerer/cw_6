@@ -1,0 +1,88 @@
+[
+  {
+    "model": "users.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$XtK1dHorNoxWhVfwab56U7$HzWrh04lcwh8Hfz3En7lzWD/wlPZYmsmPXkAXTAnF8U=",
+      "last_login": "2023-10-13T05:06:21.857Z",
+      "is_superuser": true,
+      "first_name": "Admin",
+      "last_name": "Adminov",
+      "is_staff": true,
+      "date_joined": "2023-10-07T09:40:16Z",
+      "email": "admin@mail.ru",
+      "is_active": true,
+      "avatar": "",
+      "phone": null,
+      "verif_code": "123456",
+      "groups": [],
+      "user_permissions": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$PIWMGGB6edDjqHlqj5JjME$o2GO1uj9ys5Lbc+9PsIJxxsKnT6cIPdYi2LeFwK7ow4=",
+      "last_login": "2023-10-10T13:26:02.334Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "date_joined": "2023-10-07T09:41:03Z",
+      "email": "zhdavydova@mail.ru",
+      "is_active": true,
+      "avatar": "",
+      "phone": null,
+      "verif_code": "tNckaGxnm2o",
+      "groups": [],
+      "user_permissions": [
+        35
+      ]
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$ZrAoYRhyGmumQnlkQkwT9U$aGeFzyZety1IiUzB2zlmx7oyMaHy5yQhKx9FD8VDGm4=",
+      "last_login": "2023-10-10T13:26:29.229Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "date_joined": "2023-10-09T06:52:50Z",
+      "email": "smeshalik@mail.ru",
+      "is_active": true,
+      "avatar": "",
+      "phone": null,
+      "verif_code": "8v86lnRmT4c",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$Uq32Pw6aS2uxnR2WOkr8eW$jJlgQ1m/YnHdWP1A7jkj9OPmbx1J0n8br979ntFQ+pE=",
+      "last_login": "2023-10-13T05:01:01.919Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "date_joined": "2023-10-10T13:02:37.618Z",
+      "email": "avards222@gmail.com",
+      "is_active": true,
+      "avatar": "",
+      "phone": null,
+      "verif_code": "YTUuEqXNIDA",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "model": "blog.blog",
+    "pk": 1,
+    "fields": {
+      "title": "Изменения в работе с рассылками",
+      "body": "Что-то очень новое и усовершенствованное",
+      "picture": "blog/рассылки.png",
+      "view_count": 0,
+      "date_created": "2023-10-10T08:38:11.608Z"
+    }
+  },
+  {
+    "model": "blog.blog",
+    "pk": 2,
+    "fields": {
+      "title": "Лучшее",
+      "body": "мы собрали для вас лучшие практические рекомендации по управлению рассылками",
+      "picture": "blog/тг.png",
+      "view_count": 0,
+      "date_created": "2023-10-10T08:40:10.586Z"
+    }
+  },
+  {
+    "model": "blog.blog",
+    "pk": 3,
+    "fields": {
+      "title": "Как правильно создать рассылку",
+      "body": "что-то на космиечском",
+      "picture": "blog/утил.jpg",
+      "view_count": 0,
+      "date_created": "2023-10-10T08:40:47.839Z"
+    }
+  },
+  {
+    "model": "blog.blog",
+    "pk": 4,
+    "fields": {
+      "title": "Граммотное планирование",
+      "body": "Весь тайм-менеджмент в одной статье",
+      "picture": "blog/веб.jpg",
+      "view_count": 0,
+      "date_created": "2023-10-10T08:41:34.082Z"
+    }
+  }
+]
