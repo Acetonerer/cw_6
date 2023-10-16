@@ -1,0 +1,36 @@
+{% extends 'client/base.html' %}
+{% block content %}
+
+<div class="col-12 col-md-12 col-sm-12">
+    <div class="row">
+        <div class="col-6">
+            <div class="card mb-12 box-shadow">
+                <div class="card-header">
+                     {% if object %}
+                       <h3 class="my-0 font-weight-normal"> Редактирование ообщения</h3>
+                    {% else %}
+                       <h3 class="my-0 font-weight-normal"> Создание сообщения</h3>
+                    {% endif %}
+                </div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="btn-group-center">
+                        <button type="submit" class="btn btn-lg btn-block btn-outline-primary">
+                            {% if object %}
+                            Сохранить
+                            {% else %}
+                            Создать
+                            {% endif %}
+                        </button>
+                        <a href="{% url 'mailling:mailling_list' %}" type="button" class="btn btn-lg btn-block btn-outline-secondary">Назад</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

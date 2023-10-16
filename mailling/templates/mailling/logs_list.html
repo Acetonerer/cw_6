@@ -1,0 +1,37 @@
+{% extends 'client/base.html' %}
+
+{% block content %}
+
+<div class="row">
+
+    {% for object in object_list %}
+
+    <div class="col-4">
+
+        <div class="card shadow-sm">
+
+            <div class="card-header">
+
+                <h4 class="my-0 font-weight-normal">Рассылка:{{object.mailling_id.message.subject_letter}}</h4>
+
+            </div>
+
+            <div class="card-body">
+
+                <p class="card-text">Дата и время последней отправки рассылки: {{object.last_try}}</p>
+
+                <p class="card-text">Статус отправления: {{ object.status_try }}</p>
+
+                <p class="card-text">Ответ сервера: {{ object.answer}}</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

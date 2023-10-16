@@ -1,0 +1,52 @@
+{% extends 'client/base.html' %}
+{% load my_tags %}
+{% block content %}
+
+<div class="container">
+    <div class="row text-start">
+        <div class="col-lg-9 col-md-6 col-sm-12">
+            <div class="card mb-4 box-shadow">
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <tr>
+                            <td class="w-25">Количество рассылок (всего)</td>
+                            <td>{{ mailling }}</td>
+                        </tr>
+                        <tr>
+                            <td class="w-25">Количество активных рассылок</td>
+                            <td>{{ active_mailling }}</td>
+                        </tr>
+                        <tr>
+                            <td class="w-25">Количество зарегистрирвоанных клиентов(всего)</td>
+                            <td>{{ client }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+{% for object in object_list %}
+  <div class="row text-center">
+    <div class="col-12">
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h4 class="card-title pricing-card-title">{{object.title|title}}</h4>
+            </div>
+            <img class="card-img-top"
+                 src="{% mediapath object.picture %}"/>
+            <div class="card-body">
+                <h4 class="my-0 font-weight-normal">{{object.body }}</h4>
+                <ul class="list-unstyled mt-3 mb-4 text-start m-3">
+                    <li>Просмотры: {{object.view_count }}</li>
+                    <li>Дата публикации: {{object.date_created}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}

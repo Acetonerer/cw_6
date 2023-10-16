@@ -1,0 +1,36 @@
+{% extends 'client/base.html' %}
+{% block content %}
+<div class="col-12 mb-5">
+    {% if not user.is_staff %}
+        <a href="{% url 'mailling:create' %}" class="btn btn-primary my-2">Создать сообщение</a>
+    {% endif %}
+</div>
+<div class="col-12 mb-5">
+    {% if not user.is_staff %}
+        <a href="{% url 'mailling:mailling_create' %}" class="btn btn-primary my-2">Создать рассылку</a>
+    {% endif %}
+</div>
+<div class="row">
+  {% for object in object_list %}
+  <div class="col-6">
+    <div class="card mb-4 box-shadow">
+      <div class="card-body">
+        <h3 class="card-text"> тема: {{ object.message.subject_letter|title }}</h3>
+        <p class="card-text"> статус: {{ object.status }}</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group-center">
+            <a href="{% url 'mailling:mailling_view' object.pk %}" class="btn btn-sm btn-outline-secondary">Просмотр рассылки</a>
+              <a href="{% url 'mailling:mailling_edit' object.pk %}" type="button" class="btn btn-sm btn-outline-secondary">Редактирование рассылки</a>
+                <a href="{% url 'mailling:mailling_delete' object.pk %}" type="button" class="btn btn-sm btn-outline-danger">Удаление рассылки</a>
+          </div>
+          <div class="btn-group-center">
+                <a href="{% url 'mailling:edit' object.message.pk %}" type="button" class="btn btn-sm btn-outline-secondary">Редактирование сообщения</a>
+                <a href="{% url 'mailling:delete' object.message.pk %}" type="button" class="btn btn-sm btn-outline-danger">Удаление сообщения</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

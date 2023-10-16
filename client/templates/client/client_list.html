@@ -1,0 +1,27 @@
+{% extends 'client/base.html' %}
+{% block content %}
+  <a href="{% url 'client:create' %}" class="btn btn-primary my-2">Создать клиента</a>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {% for object in object_list %}
+      <div class="col-4">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <p class="card-text">{{ object.name|title }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group-center">
+                  <a href="{% url 'client:view' object.pk %}"
+                     class="btn btn-sm btn-outline-secondary">Просмотр</a>
+                    <a href="{% url 'client:edit' object.pk %}" type="button"
+                     class="btn btn-sm btn-outline-secondary">Редактирование</a>
+                    <a href="{% url 'client:delete' object.pk %}" type="button"
+                     class="btn btn-sm btn-outline-danger">Удаление</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+{% endblock %}

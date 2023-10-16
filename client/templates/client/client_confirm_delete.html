@@ -1,0 +1,20 @@
+{% extends 'client/base.html' %}
+{% block content %}
+<div class="col-12 col-md-12 col-sm-12">
+    <div class="row">
+        <div class="col-6">
+            <div class="card mb-12 box-shadow">
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <p>Хотите удалить пользователя "{{ object.name|title}}"?</p>
+                        <button type="submit" class="btn btn-lg btn-block btn-outline-danger">Подтвердить</button>
+                        <a href="{% url 'client:list' %}" class="btn btn-lg btn-block btn-outline-secondary">Отмена</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'client/base.html' %}
+{% block content %}
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="col">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Тема:{{object.message.subject_letter}}</h4>
+            </div>
+            <div class="card-body">
+                <p class="card-text">сообщение: {{object.message.body_letter}}</p>
+                <p class="card-text">пользователь: {{object.owner|default:'Неизвестный пользователь'}}</p>
+                <p class="card-text">время рассылки: {{ object.date_start}}-{{ object.date_end}}</p>
+                <p class="card-text">периодичность: {{ object.periodicity}}</p>
+                <p class="card-text">cтатус: {{object.status }}</p>
+                <p class="card-text">КОМУ:
+                    {% for clt in object.client.all %}
+                        <p class="card-text">{{ clt|title}}</p>
+                    {% endfor %}
+                <a href="{% url 'mailling:mailling_list' %}" type="button" class="btn btn-sm btn-outline-secondary">Назад</a>
+            </div>
+        </div>
+      </div>
+</div>
+{% endblock %}
