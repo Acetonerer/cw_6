@@ -126,12 +126,13 @@ class MessageDeleteView(DeleteView):
 
 
 class MainView(TemplateView):
+
     template_name = 'mailling/main.html'
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
         context_data['title'] = "Добро пожаловать в сервис управления рассылками!"
-        context_data['object_list'] = random.sample(list(Blog.objects.all()), 3)
+        context_data['object_list'] = Blog.objects.order_by('?')[:3]
         context_data['mailling'] = get_cache_count_mailling()
         context_data['active_mailling'] = Mailling.objects.filter(status='started').count()
         context_data['client'] = get_cache_count_client()
